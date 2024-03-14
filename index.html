@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marathon Pacing</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+</head>
+
+<body>
+    <main class="container">
+        <h1>Marathon Pacing</h1>
+
+        <form id="pace-form">
+            <label for="time">Time</label>
+            <input type="text" name="time" id="time">
+
+            <div id="unit-container">
+                <fieldset id="unit-fieldset">
+                    <legend>Unit</legend>
+
+                    <input type="radio" name="unit" id="km" value="km">
+                    <label for="km">km</label>
+
+                    <input type="radio" name="unit" id="mi" value="mi">
+                    <label for="mi">mi</label>
+                </fieldset>
+
+                <span id="overall-pace"></span>
+            </div>
+        </form>
+
+        <table>
+            <tbody id="results">
+            </tbody>
+        </table>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
