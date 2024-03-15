@@ -103,10 +103,21 @@ function renderResults() {
     let HTML = '';
     SPLITS[unit].forEach((split) => {
         totalSeconds = split.value * secondsPerKm;
+
+        display = '';
+        duration = '';
+        if (split.display == "Half" || split.display == "Finish") {
+            display = `<strong>${split.display}</strong>`;
+            duration = `<strong>${fancyTimeFormat(totalSeconds)}</strong>`;
+        } else {
+            display = split.display;
+            duration = fancyTimeFormat(totalSeconds);
+        }
+
         distance =
             HTML += `<tr>
-            <td>${split.display}</td>
-            <td>${fancyTimeFormat(totalSeconds)}</td>
+            <td>${display}</td>
+            <td>${duration}</td>
         </tr>`;
     });
 
