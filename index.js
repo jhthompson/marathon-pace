@@ -55,6 +55,11 @@ if (!localStorage.getItem("time")) {
 }
 time.value = localStorage.getItem("time");
 
+time.addEventListener("input", () => {
+    localStorage.setItem("time", time.value);
+    renderResults();
+});
+
 document.querySelectorAll('input[name="unit"]').forEach((radio) => {
     radio.addEventListener("click", unitClicked);
 });
