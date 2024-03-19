@@ -133,7 +133,7 @@ function renderResults() {
         secondsPerUnit = secondsPerKm;
     }
 
-    overallPace.innerHTML = `<strong>${fancyTimeFormat(secondsPerUnit, 1)}</strong> / ${localStorage.getItem("unit")}`;
+    overallPace.innerHTML = `<strong>${fancyTimeFormat(secondsPerUnit, 1)}</strong> / ${unit}`;
 }
 
 renderResults();
