@@ -59,8 +59,8 @@ document.querySelectorAll('input[name="unit"]').forEach((radio) => {
     radio.addEventListener("click", unitClicked);
 });
 
-function unitClicked() {
-    localStorage["unit"] = document.querySelector('input[name="unit"]:checked').value;
+function unitClicked(e) {
+    localStorage.setItem("unit", document.querySelector('input[name="unit"]:checked').value);
     renderResults();
 }
 
