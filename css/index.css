@@ -1,0 +1,33 @@
+#unit-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+label[for=km],
+label[for=mi] {
+    display: inline;
+    vertical-align: middle;
+}
+
+label[for=km] {
+    margin-right: 8px;
+}
+
+input[type=radio] {
+    margin-bottom: 0;
+    vertical-align: middle;
+}
+
+#unit-fieldset {
+    display: inline;
+}
+
+legend {
+    margin-bottom: 0;
+}
+
+#overall-pace {
+    font-size: 3rem;
+}
